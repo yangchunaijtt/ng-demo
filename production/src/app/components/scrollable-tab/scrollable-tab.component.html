@@ -1,0 +1,9 @@
+<ul>
+    <li *ngFor="let item of menus;let i = index;let f = first;">
+        <a href="#" [class.active]="i === selectIndex" [class.first]="f" (click)="handClick(i)">{{item.title}}</a>
+        <span class="intercationer" *ngIf="i === selectIndex;else elsetemplate" ></span>
+    </li>
+    <ng-template #elsetemplate>
+        <span class="elsetmp"></span>
+    </ng-template>
+</ul>
