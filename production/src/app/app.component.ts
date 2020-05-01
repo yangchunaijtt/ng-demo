@@ -8,6 +8,7 @@ import { TopMenu } from './components';
 })
 
 export class AppComponent {
+  scrollTopBk = "red";
   topMenu: TopMenu[] = [
     {
       title: "热门",
