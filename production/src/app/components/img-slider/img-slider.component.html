@@ -1,0 +1,9 @@
+<div class="img-slider">
+  <div class="img-contaner" #imgCatiner>
+    <img *ngFor="let slider of sliders" class="nav-section" [src]="slider.imgUrl" [alt]="slider.caption">
+  </div>
+  <div class="station">
+    <span *ngFor="let slider of sliders" class="stationSpan">
+    </span>
+  </div>
+</div>
