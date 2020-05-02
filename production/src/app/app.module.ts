@@ -3,13 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ScrollableTabComponent, ImgSliderComponent } from './components';
+import { ScrollableTabComponent } from './components';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScrollableTabComponent,
-    ImgSliderComponent
+    ScrollableTabComponent
   ],
   imports: [
     BrowserModule,

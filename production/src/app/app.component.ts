@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TopMenu, ImgSlider } from './components';
+import { TopMenu } from './components';
 
 @Component({
   selector: 'app-root',
@@ -89,58 +89,6 @@ export class AppComponent {
     {
       title: "男装",
       link: ""
-    }
-  ];
-  imgSliders:ImgSlider[] = [
-    {
-      imgUrl:"//img95.699pic.com/photo/50008/9194.jpg_wh300.jpg",
-      link:'',
-      caption:"暂无图片"
-    },
-    {
-      imgUrl:"http://img95.699pic.com/photo/50014/4148.jpg_wh300.jpg",
-      link:'',
-      caption:"暂无图片"
-    },
-    {
-      imgUrl:"//img95.699pic.com/photo/50008/9194.jpg_wh300.jpg",
-      link:'',
-      caption:"暂无图片"
-    },
-    {
-      imgUrl:"http://img95.699pic.com/photo/50014/4148.jpg_wh300.jpg",
-      link:'',
-      caption:"暂无图片"
-    },
-    {
-      imgUrl:"//img95.699pic.com/photo/50008/9194.jpg_wh300.jpg",
-      link:'',
-      caption:"暂无图片"
-    },
-    {
-      imgUrl:"//img95.699pic.com/photo/50008/9194.jpg_wh300.jpg",
-      link:'',
-      caption:"暂无图片"
-    },
-    {
-      imgUrl:"http://img95.699pic.com/photo/50014/4148.jpg_wh300.jpg",
-      link:'',
-      caption:"暂无图片"
-    },
-    {
-      imgUrl:"//img95.699pic.com/photo/50008/9194.jpg_wh300.jpg",
-      link:'',
-      caption:"暂无图片"
-    },
-    {
-      imgUrl:"http://img95.699pic.com/photo/50014/4148.jpg_wh300.jpg",
-      link:'',
-      caption:"暂无图片"
-    },
-    {
-      imgUrl:"//img95.699pic.com/photo/50008/9194.jpg_wh300.jpg",
-      link:'',
-      caption:"暂无图片"
     }
   ];
   handChange(tabItem:TopMenu){
