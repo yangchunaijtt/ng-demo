@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { TopMenu, ImgSlider } from './components';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { TopMenu, ImgSlider, ImgSliderComponent, HorGrid } from './shared/components';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,8 @@ import { TopMenu, ImgSlider } from './components';
 
 export class AppComponent {
   scrollTopBk = "red";
+  @ViewChild ("scrollAbleTab") scrollAbleTabs:ElementRef;
+  @ViewChild (ImgSliderComponent) ImgSliderComponent:ElementRef;
   topMenu: TopMenu[] = [
     {
       title: "热门",
@@ -143,7 +145,63 @@ export class AppComponent {
       caption:"暂无图片"
     }
   ];
+  IconHorData:HorGrid[] = [
+    {
+      id:1,
+      icon:'http://pics.sc.chinaz.com/Files/pic/icons128/7703/Dn18.png',
+      title:"建筑",
+      link:''
+    },
+    {
+      id:2,
+      icon:'http://pics.sc.chinaz.com/Files/pic/icons128/7703/Dn18.png',
+      title:"建筑",
+      link:''
+    },
+    {
+      id:3,
+      icon:'http://pics.sc.chinaz.com/Files/pic/icons128/7703/Dn18.png',
+      title:"建筑",
+      link:''
+    },
+    {
+      id:4,
+      icon:'http://pics.sc.chinaz.com/Files/pic/icons128/7703/Dn18.png',
+      title:"建筑",
+      link:''
+    },
+    {
+      id:5,
+      icon:'http://pics.sc.chinaz.com/Files/pic/icons128/7703/Dn18.png',
+      title:"建筑",
+      link:''
+    },
+    {
+      id:6,
+      icon:'http://pics.sc.chinaz.com/Files/pic/icons128/7703/Dn18.png',
+      title:"建筑",
+      link:''
+    },
+    {
+      id:7,
+      icon:'http://pics.sc.chinaz.com/Files/pic/icons128/7703/Dn18.png',
+      title:"建筑",
+      link:''
+    },
+    {
+      id:8,
+      icon:'http://pics.sc.chinaz.com/Files/pic/icons128/7703/Dn18.png',
+      title:"建筑",
+      link:''
+    },
+  ];
   handChange(tabItem:TopMenu){
     console.log(tabItem)
   };
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+    console.log("app首页",this.scrollAbleTabs);
+    console.log("app首页",this.ImgSliderComponent);
+  }
 }

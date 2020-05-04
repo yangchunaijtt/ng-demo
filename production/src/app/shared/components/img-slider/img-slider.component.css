@@ -6,6 +6,9 @@
     display: flex;
     overflow-x: scroll;
 }
+.nav-section{
+    width:100%;
+}
 .station{
     position: absolute;
     width:100%;

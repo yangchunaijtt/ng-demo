@@ -1,0 +1,7 @@
+<div class="container">
+  <div appGridItem class="list" *ngFor="let grids of horData">
+    <img [src]="grids.icon" alt="" appGridItemImage class="gridims"/>
+    <span class="title" appGridItemTitle>{{grids.title}}</span>
+    <p>{{result}}</p>
+  </div>
+</div>
