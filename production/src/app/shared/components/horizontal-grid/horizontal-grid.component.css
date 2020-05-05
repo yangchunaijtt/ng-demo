@@ -1,0 +1,15 @@
+:host {
+    display: block;
+    background-color:#fff;
+}
+.container {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.list{
+    padding:20px;
+}
+.list img{
+    width:50px;
+}
