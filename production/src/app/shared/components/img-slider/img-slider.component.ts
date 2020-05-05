@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, ViewChildren, QueryList, AfterViewChecked, Renderer2 } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, ViewChildren, QueryList, AfterViewChecked, Renderer2, ChangeDetectionStrategy } from '@angular/core';
 
 export interface ImgSlider {
   imgUrl:string;
@@ -9,7 +9,8 @@ export interface ImgSlider {
 @Component({
   selector: 'app-img-slider',
   templateUrl: './img-slider.component.html',
-  styleUrls: ['./img-slider.component.css']
+  styleUrls: ['./img-slider.component.css'],
+  changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class ImgSliderComponent implements OnInit,AfterViewChecked {
   @Input() sliders:ImgSlider[] = [];

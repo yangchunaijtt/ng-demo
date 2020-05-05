@@ -1,0 +1,9 @@
+<div *ngIf="selectedLink =='hot' else other">
+    <app-img-slider [sliders]="imgSliders"></app-img-slider>
+    <app-horizontal-grid [horData]='IconHorData'></app-horizontal-grid>
+    <app-demo></app-demo>
+    <router-outlet></router-outlet>
+</div>
+<ng-template #other>
+    other works
+</ng-template> 

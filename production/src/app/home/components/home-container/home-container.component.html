@@ -1,0 +1,8 @@
+<app-scrollable-tab 
+[menus]="topMenu" 
+[headerBackground]="scrollTopBk"
+(tabSelected)="handChange($event)"
+#scrollAbleTab>
+<!-- <div name="hello">hello word!</div> -->
+</app-scrollable-tab>
+<router-outlet></router-outlet>

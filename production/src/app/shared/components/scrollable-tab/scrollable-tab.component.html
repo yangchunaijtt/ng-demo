@@ -1,6 +1,6 @@
 <ul [ngStyle]="{'background-color':headerBackground}">
     <li *ngFor="let item of menus;let i = index;let f = first;">
-        <a href="#" [ngStyle]="{'color':i === selectIndex?titleActiveColor:titleColor}" [class.first]="f" (click)="handClick(i)">{{item.title}}</a>
+        <a  [ngStyle]="{'color':i === selectIndex?titleActiveColor:titleColor}" [class.first]="f" (click)="handClick(i)">{{item.title}}</a>
         <span class="intercationer" *ngIf="i === selectIndex;else elsetemplate" 
         [ngStyle]="{'background-color':spanBk}"></span>
     </li>

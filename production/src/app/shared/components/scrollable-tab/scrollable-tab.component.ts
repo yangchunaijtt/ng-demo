@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChanges, AfterContentInit, AfterViewChecked, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 
 export interface TopMenu {
   title: String;
@@ -12,7 +13,7 @@ export interface TopMenu {
 })
 export class ScrollableTabComponent implements OnInit,OnChanges,AfterContentInit,AfterViewChecked,OnDestroy {
 
-  constructor() {
+  constructor(private route:Router) {
     console.log("组件构造函数")
    }
   ngOnChanges(changes: SimpleChanges): void {
@@ -47,5 +48,7 @@ export class ScrollableTabComponent implements OnInit,OnChanges,AfterContentInit
   handClick(index: number) {
     this.selectIndex = index;
     this.tabSelected.emit(this.menus[this.selectIndex]);
+    console.log("点击的参数有",this.menus[this.selectIndex])
+    this.route.navigate(['home',this.menus[this.selectIndex].link]);
   };
 }
