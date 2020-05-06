@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
 import { HorGrid, ImgSlider, ImgSliderComponent,DemoComponent } from 'src/app/shared/components';
 import { ActivatedRoute } from '@angular/router';
 
@@ -8,8 +8,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home-detail.component.css']
 })
 export class HomeDetailComponent implements OnInit {
+  
 
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute,
+    private cd:ChangeDetectorRef) { }
   selectedLink ="hot";
   @ViewChild (ImgSliderComponent) ImgSliderComponent:ElementRef;
   imgSliders:ImgSlider[] = [
@@ -118,6 +120,7 @@ export class HomeDetailComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       
       this.selectedLink= params.get('targetLink');
+      this.cd.markForCheck();
       console.log("params",params,this.selectedLink);
     })
   }
