@@ -3,8 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  bacsUrl:" http://mock.studyinghome.com/mock/5e6734841328351ac71c20e1/ng"
+  production: false
 };
 
 /*

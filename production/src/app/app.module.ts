@@ -4,10 +4,9 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {  SharedModule } from './shared/shared.module';
-import {  HomeModule, HomeService } from './home';
+import {  HomeModule } from './home';
 import { registerLocaleData } from '@angular/common';
 import localZh from "@angular/common/locales/zh-Hans"
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,9 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     BrowserModule,
     AppRoutingModule,
-    HomeModule,
-    // HomeService,
-    HttpClientModule
+    HomeModule
   ],
   providers: [
     {
